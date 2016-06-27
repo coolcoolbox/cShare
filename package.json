@@ -1,0 +1,14 @@
+{
+  "name": "cShare",
+  "version": "0.0.1",
+  "description": "custom share",
+  "main":  ["css/share.css", "js/share.js"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "jquery":"~1.6.3"
+  },
+  "author": "cuss",
+  "license": "ISC"
+}
