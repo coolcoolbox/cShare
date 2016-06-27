@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.8.0.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="css/share.css">
+</head>
+<body>
+
+<div class="share-tools  bdsharebuttonbox">
+    <div class="group ">
+        <div class="qq item ">
+            <i class="img"></i>
+            <a class="js-qq one" data-cmd="tqq">QQ</a>
+        </div>
+        <div class="sina item">
+            <i class="img"></i>
+            <a class="js-sina">新浪微博</a>
+        </div>
+        <div class="weixin item">
+            <i class="img"></i>
+            <a class="js-weixin one">微信</a>
+
+            <div class="tips">
+                <img>
+
+                <p>请扫描分享到朋友圈</p>
+            </div>
+        </div>
+    </div>
+    <div class="share-zw item">
+        <i class="img"></i>
+        <a class="js-share-zw">分享展位</a>
+    </div>
+    <div class="to-top item">
+        <i class="img"></i>
+        <a class="js-top">返回顶部</a>
+    </div>
+</div>
+<script src="js/base_config.js"></script>
+<script src="js/share.js"></script>
+<!--<script type="text/javascript">
+    (function () {
+        var p = {
+            url: location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+            desc: '', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+            title: '', /*分享标题(可选)*/
+            summary: '', /*分享摘要(可选)*/
+            pics: '', /*分享图片(可选)*/
+            flash: '', /*视频地址(可选)*/
+            site: '', /*分享来源(可选) 如：QQ分享*/
+            style: '201',
+            width: 32,
+            height: 32
+        };
+        var s = [];
+        for (var i in p) {
+            s.push(i + '=' + encodeURIComponent(p[i] || ''));
+        }
+        document.write(['<a class="qcShareQQDiv" href="http://connect.qq.com/widget/shareqq/index.html?', s.join('&'), '" target="_blank">分享到QQ</a>'].join(''));
+    })();
+</script>
+<script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>-->
+<script>
+/*
+    $(function () {
+        $(".img-test").qrcode({
+            render: "table",
+            width: 200,
+            height: 200,
+            text: 'http://www.65hj.com/'
+        });
+    });
+
+    //上面是qcode插件
+  */
+/*  http://10.1.16.21:10186/qrcode/qrcode.jsp?json={"text":"http://dev-meps.65test.com/2e128baa68b74e4093faeaa40d189274.html"}*//*
+
+    var $tools = $('.share-tools');
+    var s = new $.Share($tools, {
+        before: function () {
+            //设置 微信里面的图片
+            */
+/* var config = {
+                url:URL.esbUrl || 'http://10.1.16.13:10016/ESB/examservice.jsp'
+            };
+             $tools.find('.weixin .tips img').attr('src',config.url + '?app=qrcode.qrcode&json={"text":"http://dev-meps.65test.com/2e128baa68b74e4093faeaa40d189274.html","version":"127"}');*//*
+
+             $tools.find('.weixin .tips img').attr('src','http://10.1.16.21:10186/qrcode/qrcode.jsp?json={"text":"'+ location.href + '","version":"127"}');
+        }
+    });
+    //百度插件
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "内容",
+            "bdMini": "1",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "1",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {"viewList": ["tsina", "tqq", "qzone", "weixin", "sqq"], "viewText": "分享到：", "viewSize": "16"},
+        "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["tsina", "tqq", "qzone", "weixin", "sqq"]}
+    };
+    with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+*/
+
+</script>
+</body>
+</html>

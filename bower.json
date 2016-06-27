@@ -1,0 +1,8 @@
+{
+  "name": "cShare",
+  "version": "0.0.1",
+  "main": ["css/share.css", "js/share.js"],
+  "dependencies": {
+		"jquery": ">=1.6.3"
+  }
+}

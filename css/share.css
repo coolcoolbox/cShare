@@ -1,0 +1,132 @@
+body{
+    position: relative;
+}
+
+.share-tools{
+    position: fixed;
+    right: 36px;
+    bottom: 20px;
+    width: 46px;
+}
+.share-tools *{
+    box-sizing: border-box;
+}
+.share-tools .item{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 1px;
+    background:#e1e0e7 ;
+    cursor: pointer;
+}
+.share-tools .item i{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    *zoom: 1;
+}
+.share-tools .item:hover i{
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity: 0;
+}
+.share-tools .item:hover a{
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    opacity: 1;
+    background: #fc938f;
+}
+/*.share-tools .item:hover .tips{
+    display: block;
+}*/
+.share-tools .item a{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    padding: 7px 7px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity .5s;
+    transition: all .5s;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity: 0;
+    font-size: 14px;
+    color: #fff !important;
+    text-align: center;
+    -webkit-user-select: none;
+}
+.share-tools .item a.one{
+    padding: 0;
+    line-height: 45px;
+}
+.share-tools .group{
+    display: none;
+}
+.share-tools.open .group{
+    display: block;
+}
+.share-tools .qq i{
+    background: url("../images/share.png") no-repeat 0 0;
+}
+
+.share-tools .sina i{
+    background: url("../images/share.png") no-repeat 0 -46px;
+}
+.share-tools .weixin i{
+    background: url("../images/share.png") no-repeat 0 -94px;
+}
+.share-tools .share-zw i{
+    background: url("../images/share.png") no-repeat 0 -141px;
+}
+.share-tools .to-top i{
+    background: url("../images/share.png") no-repeat 0 -189px;
+}
+.share-tools .tips{
+    position: absolute;
+    left: -162px;
+    top: -45px;
+    padding-top: 10px;
+    width: 147px;
+    height: 169px;
+    background: #fe9493;
+    display: none;
+}
+.share-tools img{
+    display: block;
+    margin: auto;
+    height: 127px;
+    border: none;
+    outline: none;
+}
+.share-tools p{
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+.share-tools .tips:after{
+    content: '';
+    position: absolute;
+    display: block;
+    right: -14px;
+    top: 55px;
+    width:14px ;
+    height: 27px;
+    background: url("../images/tips-right.png") no-repeat;
+}
+
+.bdshare-button-style1-16 a,.bdshare-button-style1-16 .bds_more {
+    float: none !important;
+    line-height: 14px;
+    background-image: none !important;
+    cursor: pointer;
+    margin: 0 !important;
+}
+.sr-bdimgshare{
+    display: none !important;
+}
